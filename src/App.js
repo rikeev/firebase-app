@@ -1,7 +1,7 @@
 import React from 'react';
 import {Header} from './components/header.js';
 import {Footer} from './components/footer.js';
-import {LoginForm} from './components/loginForm'; 
+import LoginForm from './components/loginForm'; 
 
 function App() {
   let [counter, setCounter] = React.useState(10);

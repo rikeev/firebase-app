@@ -1,22 +1,17 @@
 import { useState } from "react"
 
 
-export function LoginForm() {
-    const [email, setEmail] = useState(0)
+export default function LoginForm() {
     function incriment(){
-        setEmail(email+1)
+         console.log(email, password)
     }
-    function discriment(){
-        setEmail(email-1)
-    }
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
    return (
         <div>
-            <input type="text" value={email}></input>
-            <input type="text" value={email}></input>
-            {email}
-            <button onClick={incriment}>incriment</button>
-            <button onClick={discriment}>discriment</button>
-
+            <input onChange={(evt)=>{setEmail(evt.target.value)}} type="text" value={email}></input>
+            <input onChange={(e)=>{setPassword(e.target.value)}} type="text" value={password}></input>
+            <button onClick ={incriment}>Login</button>
         </div>
    )    
 }
