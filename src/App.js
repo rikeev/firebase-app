@@ -2,7 +2,7 @@ import React from 'react';
 import {Header} from './components/header.js';
 import {Footer} from './components/footer.js';
 import LoginForm from './components/loginForm'; 
-
+import {RegisterForm} from './components/registerform.js';
 function App() {
   let [counter, setCounter] = React.useState(10);
   React.useEffect(()=>{
@@ -21,6 +21,7 @@ function App() {
         <Header />
         <Footer />
         <LoginForm />
+        <RegisterForm />
         <p>{counter}</p>
         <button onClick={()=> setCounter(counter+1)}>+</button>
         <button onClick={()=> setCounter(counter-1)}>-</button>
